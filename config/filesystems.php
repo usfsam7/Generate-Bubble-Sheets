@@ -37,6 +37,11 @@ return [
             'throw' => false,
             'report' => false,
         ],
+        'fonts' => [
+            'driver' => 'local',
+            'root' => storage_path('fonts'),  // Will use storage/fonts directory
+            'throw' => false,
+        ],
 
         'public' => [
             'driver' => 'local',

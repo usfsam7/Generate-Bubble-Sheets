@@ -45,7 +45,7 @@ return [
          * Times-Roman, Times-Bold, Times-BoldItalic, Times-Italic,
          * Symbol, ZapfDingbats.
          */
-        'font_dir' => storage_path('fonts/Amiri-Bold.ttf'), // advised by dompdf (https://github.com/dompdf/dompdf/pull/782)
+        'font_dir' => storage_path('fonts'), // advised by dompdf (https://github.com/dompdf/dompdf/pull/782)
 
         /**
          * The location of the DOMPDF font cache directory
@@ -55,7 +55,7 @@ return [
          *
          * Note: This directory must exist and be writable by the webserver process.
          */
-        'font_cache' => storage_path('fonts/Amiri-Bold.ttf'),
+        'font_cache' => storage_path('fonts'),
 
         /**
          * The location of a temporary directory.
@@ -179,10 +179,15 @@ return [
          *
          * @var string
          */
-        // 'default_font' => 'serif',
-        'default_font' => 'Amiri',
+        'default_font' => 'serif',
+
+
 
         'isFontSubsettingEnabled' => false,
+
+
+
+
         /**
          * Image DPI setting
          *

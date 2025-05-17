@@ -67,19 +67,22 @@
 
     <div class="upload-container">
         <h2>Upload Excel File</h2>
-        <form action="{{ route('upload.excel') }}" method="POST" enctype="multipart/form-data">
+        <form action="{{ route('process.excel') }}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="file-input">
-                <label>Excel File</label>
+
                 <input type="file" name="excel" accept=".xls, .xlsx" required>
             </div>
-            <!-- <div class="file-input">
-                <label>Word Template</label>
-                <input type="file" name="word_template" accept=".docx" required>
-            </div> -->
 
-            <button type="submit" class="submit-btn">Convert To PDF</button>
+
+            <button type="submit" class="submit-btn">Generate Bubble Sheets</button>
         </form>
+
+@if(session('error'))
+    <div class="alert alert-danger mt-3">
+        {{ session('error') }}
+    </div>
+@endif
     </div>
 
 </body>
