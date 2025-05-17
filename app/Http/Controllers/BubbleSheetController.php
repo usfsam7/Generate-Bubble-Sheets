@@ -50,7 +50,7 @@ class BubbleSheetController extends Controller
             $pdf->setPrintFooter(false);
 
             // Amiri font supports Arabic and UTF-8 encoding.
-            $pdf->SetFont('amiri', '', 13.3);
+            $pdf->SetFont('amiri', 'B', 13);
 
 
             // Extracting student data from the excel file.
